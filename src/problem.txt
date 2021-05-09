@@ -1,0 +1,2 @@
+lezm tzidha bech tnajm ta5li el back wel front ye5dmo ma3 ba3dhommm :) ssA7it nexttt
+@CrossOrigin(origins = "http://localhost:4200")

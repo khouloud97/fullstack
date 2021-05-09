@@ -1,0 +1,24 @@
+<h2>Liste des Personne</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last name</th>
+      <th>Email id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of persons">
+      <td>
+        {{ person.firstname }}
+      </td>
+      <td>
+        {{ person.lastname }}
+      </td>
+      <td>
+        {{ person.emailId }}
+      </td>
+    </tr>
+  </tbody>
+</table>

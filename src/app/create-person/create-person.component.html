@@ -1,0 +1,44 @@
+<h3>Add New User</h3>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <div class="form-group">
+    <label> First name</label>
+    <input
+      id=""
+      name="firstname"
+      [(ngModel)]="person.firstname"
+      type="text"
+      class="form-control"
+      placeholder=""
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label> LAst name</label>
+    <input
+      id=""
+      name="lastname"
+      [(ngModel)]="person.lastname"
+      type="text"
+      class="form-control"
+      placeholder=""
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label> EmailId</label>
+    <input
+      id=""
+      name="emailId"
+      [(ngModel)]="person.emailId"
+      type="text"
+      class="form-control"
+      placeholder=""
+      required
+    />
+  </div>
+
+  <button class="btn btn-success" type="submit">Submit</button>
+</form>
