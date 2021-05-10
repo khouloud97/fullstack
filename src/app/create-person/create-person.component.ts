@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from '../person';
 import { NgForm } from '@angular/forms';
+import { PersonService } from '../person.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-person',
@@ -10,18 +12,25 @@ import { NgForm } from '@angular/forms';
 export class CreatePersonComponent implements OnInit {
   public person: Person = new Person();
 
-  constructor() {}
-  onSubmit(f: NgForm) {
-    let p: Person = f.value;
-
-    console.log(this.person);
-  }
-
+  constructor(private personService: PersonService, private router: Router) {}
 
   ngOnInit(): void {
-
-    this.person.firstname="aaa"
-    console.log( this.person)
-
+    console.log(this.person);
+  }
+  savePerson() {
+    this.personService.createperson(this.person).subscribe(
+      (data) => {
+        console.log(data);
+      },
+      (error) => console.log(error)
+    );
+  }
+  onSubmit(f: NgForm) {
+    let p: Person = f.value;
+    this.savePerson();
+    console.log(this.person);
+  }
+  goToPersonList() {
+    this.router.navigate(['/persons']);
   }
 }
