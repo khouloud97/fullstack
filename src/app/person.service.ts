@@ -17,4 +17,14 @@ export class PersonService {
   createperson(person: Person): Observable<Object> {
     return this.httpClient.post(`${this.baseURL}`, person);
   }
+  getPersonById(id: number): Observable<Person> {
+    return this.httpClient.get<Person>(`${this.baseURL}/${id}`);
+  }
+  updatePerson(id: number, person: Person): Observable<Object> {
+    return this.httpClient.put(`${this.baseURL}/${id}`, person);
+  }
+
+  deletePerson(id: number): Observable<Object> {
+    return this.httpClient.delete(`${this.baseURL}/${id}`);
+  }
 }

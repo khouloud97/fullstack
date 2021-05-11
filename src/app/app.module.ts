@@ -7,8 +7,10 @@ import { PersonListComponent } from './person-list/person-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreatePersonComponent } from './create-person/create-person.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UpdatePersonComponent } from './update-person/update-person.component';
+import { PersonDetailsComponent } from './person-details/person-details.component';
 @NgModule({
-  declarations: [AppComponent, PersonListComponent, CreatePersonComponent],
+  declarations: [AppComponent, PersonListComponent, CreatePersonComponent, UpdatePersonComponent, PersonDetailsComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

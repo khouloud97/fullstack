@@ -29,6 +29,7 @@ export class CreatePersonComponent implements OnInit {
     let p: Person = f.value;
     this.savePerson();
     console.log(this.person);
+    this.router.navigate(['/persons']);
   }
   goToPersonList() {
     this.router.navigate(['/persons']);

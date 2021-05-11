@@ -6,6 +6,7 @@
       <th>First Name</th>
       <th>Last name</th>
       <th>Email id</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -18,6 +19,25 @@
       </td>
       <td>
         {{ person.emailId }}
+      </td>
+      <td>
+        <button (click)="updatePerson(person.id)" class="btn btn-info">
+          Update
+        </button>
+        <button
+          (click)="deletePerson(person.id)"
+          class="btn btn-danger"
+          style="margin-left: 10px"
+        >
+          Delete
+        </button>
+        <button
+          (click)="detailsPerson(person.id)"
+          class="btn btn-info"
+          style="margin-left: 10px"
+        >
+          Detail
+        </button>
       </td>
     </tr>
   </tbody>
