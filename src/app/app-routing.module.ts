@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreatePersonComponent } from './create-person/create-person.component';
+import { HomeComponent } from './home/home.component';
 import { PersonDetailsComponent } from './person-details/person-details.component';
 import { PersonListComponent } from './person-list/person-list.component';
 import { UpdatePersonComponent } from './update-person/update-person.component';
@@ -24,8 +25,12 @@ const routes: Routes = [
     component: PersonDetailsComponent,
   },
   {
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
     path: '',
-    redirectTo: 'persons',
+    redirectTo: 'home',
     pathMatch: 'full',
   },
 ];

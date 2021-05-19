@@ -1,12 +1,15 @@
-<h3>View person Details</h3>
-<div>
+<div id="print-section">
+  <h3>View person Details</h3>
   <div>
-    <label> <b> First Name: </b></label> {{ person.firstname }}
-  </div>
-  <div>
-    <label> <b> Last Name: </b></label> {{ person.lastname }}
-  </div>
-  <div>
-    <label> <b> Email Id: </b></label> {{ person.emailId }}
+    <div>
+      <label> <b> First Name: </b></label> {{ person.firstname }}
+    </div>
+    <div>
+      <label> <b> Last Name: </b></label> {{ person.lastname }}
+    </div>
+    <div>
+      <label> <b> Email Id: </b></label> {{ person.emailId }}
+    </div>
+    <button (click)="print()">print</button>
   </div>
 </div>

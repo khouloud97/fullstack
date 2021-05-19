@@ -9,14 +9,24 @@ import { CreatePersonComponent } from './create-person/create-person.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdatePersonComponent } from './update-person/update-person.component';
 import { PersonDetailsComponent } from './person-details/person-details.component';
+import { HomeComponent } from './home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
-  declarations: [AppComponent, PersonListComponent, CreatePersonComponent, UpdatePersonComponent, PersonDetailsComponent],
+  declarations: [
+    AppComponent,
+    PersonListComponent,
+    CreatePersonComponent,
+    UpdatePersonComponent,
+    PersonDetailsComponent,
+    HomeComponent,
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule, ReactiveFormsModule ,
-      CommonModule
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
