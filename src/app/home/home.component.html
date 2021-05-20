@@ -1,1 +1,13 @@
-<p>home works!</p>
+<div class="container mt-5">
+  <h4>News page</h4>
+  <div class="row">
+    <div *ngFor="let d of Homedisplay" class="col-lg-3">
+      <div class="box">
+        <img src="{{ d.urlToImage }}" width="100%" />
+        <h5 class="mt-2 mb-2">{{ d.title }}</h5>
+        <p>{{ d.content }}</p>
+        <a href="{{ d.url }}" class="btn btn-dark btn-sm mt-2"> Read More</a>
+      </div>
+    </div>
+  </div>
+</div>

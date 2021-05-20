@@ -28,7 +28,8 @@ export class CreatePersonComponent implements OnInit {
   onSubmit(f: NgForm) {
     let p: Person = f.value;
     this.savePerson();
-    console.log(this.person);
+    alert('ajout avec succes');
+    this.router.navigate(['/persons']);
   }
 
   goToPersonList() {

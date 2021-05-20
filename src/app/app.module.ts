@@ -10,7 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdatePersonComponent } from './update-person/update-person.component';
 import { PersonDetailsComponent } from './person-details/person-details.component';
 import { HomeComponent } from './home/home.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NewsapiservicesService } from './services/newsapiservices.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     CommonModule,
   ],
-  providers: [],
+  providers: [NewsapiservicesService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

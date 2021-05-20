@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsapiservicesService } from '../services/newsapiservices.service';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  constructor(private _services: NewsapiservicesService) {}
+
+  Homedisplay: any = [];
+
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this._services.Home().subscribe((result) => {
+      console.log(result);
+      this.Homedisplay = result.articles;
+    });
   }
 }
