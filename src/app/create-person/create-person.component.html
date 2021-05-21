@@ -1,44 +1,59 @@
-<h3>Add New User</h3>
+<body>
+  <h3>Add New User</h3>
 
-<form #f="ngForm" (ngSubmit)="onSubmit(f)">
-  <div class="form-group">
-    <label> First name</label>
-    <input
-      id=""
-      name="firstname"
-      [(ngModel)]="person.firstname"
-      type="text"
-      class="form-control"
-      placeholder=""
-      required
-    />
-  </div>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="form-group">
+      <label> First name</label>
+      <input
+        id=""
+        name="firstname"
+        [(ngModel)]="person.firstname"
+        type="text"
+        class="form-control"
+        placeholder=""
+        required
+      />
+    </div>
 
-  <div class="form-group">
-    <label> LAst name</label>
-    <input
-      id=""
-      name="lastname"
-      [(ngModel)]="person.lastname"
-      type="text"
-      class="form-control"
-      placeholder=""
-      required
-    />
-  </div>
+    <div class="form-group">
+      <label> LAst name</label>
+      <input
+        id=""
+        name="lastname"
+        [(ngModel)]="person.lastname"
+        type="text"
+        class="form-control"
+        placeholder=""
+        required
+      />
+    </div>
 
-  <div class="form-group">
-    <label> Test</label>
-    <input
-      id=""
-      name="emailId"
-      [(ngModel)]="person.emailId"
-      type="email"
-      class="form-control"
-      placeholder=""
-      required
-    />
-  </div>
+    <div class="form-group">
+      <label> Email </label>
+      <input
+        id=""
+        name="emailId"
+        [(ngModel)]="person.emailId"
+        type="email"
+        class="form-control"
+        placeholder=""
+        required
+      />
+    </div>
 
-  <button class="btn btn-success" type="submit">Submit</button>
-</form>
+    <div class="form-group">
+      <label> Image</label>
+      <input
+        id=""
+        name="url"
+        [(ngModel)]="person.url"
+        type="text"
+        class="form-control"
+        placeholder=""
+        required
+      />
+    </div>
+
+    <button class="btn btn-success" type="submit">Submit</button>
+  </form>
+</body>

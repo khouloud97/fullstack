@@ -6,6 +6,7 @@
       <th>First Name</th>
       <th>Last name</th>
       <th>Email id</th>
+      <th>Image</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -19,6 +20,11 @@
       </td>
       <td>
         {{ person.emailId }}
+      </td>
+      <td>
+        <div>
+          <img src="{{ person.url }}" width="50px" />
+        </div>
       </td>
       <td>
         <button (click)="updatePerson(person.id)" class="btn btn-info">

@@ -10,6 +10,11 @@
     <div>
       <label> <b> Email Id: </b></label> {{ person.emailId }}
     </div>
+    <div>
+      <label> <b> Image: </b></label>
+
+      <img src="{{ person.url }}" width="50px" />
+    </div>
     <button (click)="print()">print</button>
   </div>
 </div>

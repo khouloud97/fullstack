@@ -3,4 +3,5 @@ export class Person {
   firstname: string;
   lastname: string;
   emailId: string;
+  url: string;
 }
