@@ -6,3 +6,13 @@
 .box h5 {
   font-size: 16px;
 }
+.ok {
+  text-align: center;
+  background-color: rgba(238, 184, 197, 0.733);
+}
+.ok > h3 {
+  text-align: center;
+}
+.ok > img {
+  text-align: center;
+}

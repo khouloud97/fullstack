@@ -27,16 +27,13 @@
           <img src="{{ person.url }}" width="50px" />
         </div>
       </td>
-      <button class="btn btn-info">
-        <a
-          routerLink="/vaccin
-        "
-          >Heroes</a
-        >
-        <td>
-          {{ person.cp_fk }}
-        </td>
-      </button>
+      <a href="/vaccins">
+        <button class="btn btn-Success">
+          <td>
+            {{ person.cp_fk }}
+          </td>
+        </button></a
+      >
 
       <td>
         <button (click)="updatePerson(person.id)" class="btn btn-info">

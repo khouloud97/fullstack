@@ -5,9 +5,7 @@
     <tr>
       <th>First Name</th>
       <th>Last name</th>
-      <th>Email id</th>
-      <th>Image</th>
-      <th>Actions</th>
+      <th>Phone</th>
     </tr>
   </thead>
   <tbody>
@@ -19,31 +17,7 @@
         {{ vaccin.lastname }}
       </td>
       <td>
-        {{ vaccin.emailId }}
-      </td>
-      <td>
-        <div>
-          <img src="{{ vaccin.url }}" width="50px" />
-        </div>
-      </td>
-      <td>
-        <button (click)="updatevaccin(vaccin.id)" class="btn btn-info">
-          Update
-        </button>
-        <button
-          (click)="deletevaccin(vaccin.id)"
-          class="btn btn-danger"
-          style="margin-left: 10px"
-        >
-          Delete
-        </button>
-        <button
-          (click)="detailsvaccin(vaccin.id)"
-          class="btn btn-info"
-          style="margin-left: 10px"
-        >
-          Detail
-        </button>
+        {{ vaccin.phone }}
       </td>
     </tr>
   </tbody>
