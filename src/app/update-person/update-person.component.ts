@@ -31,6 +31,8 @@ export class UpdatePersonComponent implements OnInit {
       (data) => {
         console.log(data);
         this.person = new Person();
+        this.router.navigate(['/persons']);
+
         //this.gotoList();
       },
       (error) => console.log(error)

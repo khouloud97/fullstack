@@ -1,4 +1,4 @@
-<h2>Liste des Personne</h2>
+<h2>Liste des vaccinne</h2>
 
 <table class="table table-striped">
   <thead>
@@ -8,49 +8,37 @@
       <th>Email id</th>
       <th>Image</th>
       <th>Actions</th>
-      <th>VaccinId</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let person of persons">
+    <tr *ngFor="let vaccin of vaccins">
       <td>
-        {{ person.firstname }}
+        {{ vaccin.firstname }}
       </td>
       <td>
-        {{ person.lastname }}
+        {{ vaccin.lastname }}
       </td>
       <td>
-        {{ person.emailId }}
+        {{ vaccin.emailId }}
       </td>
       <td>
         <div>
-          <img src="{{ person.url }}" width="50px" />
+          <img src="{{ vaccin.url }}" width="50px" />
         </div>
       </td>
-      <button class="btn btn-info">
-        <a
-          routerLink="/vaccin
-        "
-          >Heroes</a
-        >
-        <td>
-          {{ person.cp_fk }}
-        </td>
-      </button>
-
       <td>
-        <button (click)="updatePerson(person.id)" class="btn btn-info">
+        <button (click)="updatevaccin(vaccin.id)" class="btn btn-info">
           Update
         </button>
         <button
-          (click)="deletePerson(person.id)"
+          (click)="deletevaccin(vaccin.id)"
           class="btn btn-danger"
           style="margin-left: 10px"
         >
           Delete
         </button>
         <button
-          (click)="detailsPerson(person.id)"
+          (click)="detailsvaccin(vaccin.id)"
           class="btn btn-info"
           style="margin-left: 10px"
         >

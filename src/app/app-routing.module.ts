@@ -5,11 +5,16 @@ import { HomeComponent } from './home/home.component';
 import { PersonDetailsComponent } from './person-details/person-details.component';
 import { PersonListComponent } from './person-list/person-list.component';
 import { UpdatePersonComponent } from './update-person/update-person.component';
+import { VaccinListComponent } from './vaccin-list/vaccin-list.component';
 
 const routes: Routes = [
   {
     path: 'persons',
     component: PersonListComponent,
+  },
+  {
+    path: 'vaccins',
+    component: VaccinListComponent,
   },
 
   {

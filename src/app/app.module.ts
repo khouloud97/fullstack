@@ -11,6 +11,7 @@ import { UpdatePersonComponent } from './update-person/update-person.component';
 import { PersonDetailsComponent } from './person-details/person-details.component';
 import { HomeComponent } from './home/home.component';
 import { NewsapiservicesService } from './services/newsapiservices.service';
+import { VaccinListComponent } from './vaccin-list/vaccin-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { NewsapiservicesService } from './services/newsapiservices.service';
     UpdatePersonComponent,
     PersonDetailsComponent,
     HomeComponent,
+    VaccinListComponent,
   ],
   imports: [
     BrowserModule,
