@@ -1,5 +1,12 @@
 <h2>Liste des Personne</h2>
-
+<div class="form-group">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Search..."
+    [(ngModel)]="filterTerm"
+  />
+</div>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -12,7 +19,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let person of persons">
+    <tr *ngFor="let person of persons | filter: filterTerm">
       <td>
         {{ person.firstname }}
       </td>
@@ -28,7 +35,7 @@
         </div>
       </td>
       <a href="/vaccins">
-        <button class="btn btn-Success">
+        <button class="btn btn-danger">
           <td>
             {{ person.cp_fk }}
           </td>

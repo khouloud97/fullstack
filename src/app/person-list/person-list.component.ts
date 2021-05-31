@@ -9,6 +9,9 @@ import { PersonService } from '../person.service';
 })
 export class PersonListComponent implements OnInit {
   persons: Person[];
+
+  filterTerm: string;
+
   constructor(private personService: PersonService, private router: Router) {}
 
   ngOnInit(): void {

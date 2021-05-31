@@ -12,6 +12,8 @@ import { PersonDetailsComponent } from './person-details/person-details.componen
 import { HomeComponent } from './home/home.component';
 import { NewsapiservicesService } from './services/newsapiservices.service';
 import { VaccinListComponent } from './vaccin-list/vaccin-list.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +31,7 @@ import { VaccinListComponent } from './vaccin-list/vaccin-list.component';
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
+    Ng2SearchPipeModule,
   ],
   providers: [NewsapiservicesService],
   bootstrap: [AppComponent],
