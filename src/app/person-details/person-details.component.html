@@ -11,9 +11,12 @@
       <label> <b> Email Id: </b></label> {{ person.emailId }}
     </div>
     <div>
+      <label> <b>Vaccin Id: </b></label> {{ person.cp_fk }}
+    </div>
+    <div>
       <label> <b> Image: </b></label>
 
-      <img src="{{ person.url }}" width="50px" />
+      <img src="{{ person.url }}" width="300px" />
     </div>
     <button (click)="print()">print</button>
   </div>

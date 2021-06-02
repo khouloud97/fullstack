@@ -22,6 +22,7 @@ export class PersonListComponent implements OnInit {
       this.persons = date;
     });
   }
+
   detailsPerson(id: number) {
     this.router.navigate(['detailsPerson', id]);
   }
@@ -30,6 +31,12 @@ export class PersonListComponent implements OnInit {
   }
   deletePerson(id: number) {
     this.personService.deletePerson(id).subscribe((data) => {
+      console.log(data);
+      this.getPersons();
+    });
+  }
+  findbyvaccin(id: number) {
+    this.personService.findbyvaccin(id).subscribe((data) => {
       console.log(data);
       this.getPersons();
     });

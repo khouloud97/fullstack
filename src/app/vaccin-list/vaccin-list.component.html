@@ -1,8 +1,7 @@
-<h2>Liste des vaccinne</h2>
-
 <table class="table table-striped">
   <thead>
     <tr>
+      <th>ID</th>
       <th>First Name</th>
       <th>Last name</th>
       <th>Phone</th>
@@ -10,6 +9,9 @@
   </thead>
   <tbody>
     <tr *ngFor="let vaccin of vaccins">
+      <td>
+        {{ vaccin.id }}
+      </td>
       <td>
         {{ vaccin.firstname }}
       </td>

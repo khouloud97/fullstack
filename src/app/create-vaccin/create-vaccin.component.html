@@ -1,0 +1,48 @@
+<body>
+  <h3>Add New Vaccin</h3>
+
+  </div>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="form-group">
+      <label> name VAccin</label>
+      <input
+        id=""
+        name="firstname"
+        [(ngModel)]="vaccin.firstname"
+        type="text"
+        class="form-control"
+        placeholder=""
+        required
+        name="firstname"
+      />
+    </div>
+
+    <div class="form-group">
+      <label> Pays</label>
+      <input
+        id=""
+        name="lastname"
+        [(ngModel)]="vaccin.lastname"
+        type="text"
+        class="form-control"
+        placeholder=""
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Phone </label>
+      <input
+        id=""
+        name="phone"
+        [(ngModel)]="vaccin.phone"
+        type="phone"
+        class="form-control"
+        placeholder=""
+        required
+      />
+    </div>
+
+    <button class="btn btn-success" type="submit">Submit</button>
+  </form>
+</body>

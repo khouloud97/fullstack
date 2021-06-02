@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Person } from '../person';
 import { Vaccin } from '../vaccin';
 import { VaccinService } from '../vaccin.service';
 
@@ -10,6 +11,9 @@ import { VaccinService } from '../vaccin.service';
 })
 export class VaccinListComponent implements OnInit {
   vaccins: Vaccin[];
+  personService: any;
+  persons: Person[];
+
   constructor(private VaccinService: VaccinService, private router: Router) {}
 
   ngOnInit(): void {
@@ -30,6 +34,18 @@ export class VaccinListComponent implements OnInit {
     this.VaccinService.deleteVaccin(id).subscribe((data) => {
       console.log(data);
       this.getVaccins();
+    });
+  }
+  private getPersons() {
+    this.personService.getPersonList().subscribe((date) => {
+      this.persons = date;
+    });
+  }
+
+  findbyVaccin(id: number) {
+    this.personService.getPersonList().subscribe((data) => {
+      console.log(data);
+      this.getPersons();
     });
   }
 }

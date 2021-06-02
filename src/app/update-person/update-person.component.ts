@@ -38,6 +38,7 @@ export class UpdatePersonComponent implements OnInit {
       (error) => console.log(error)
     );
   }
+
   onSubmit() {
     this.updatePerson();
     this.router.navigate(['/persons']);

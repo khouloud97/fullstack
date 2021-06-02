@@ -11,6 +11,7 @@ import { PersonService } from '../person.service';
 export class PersonDetailsComponent implements OnInit {
   id: number;
   person: Person;
+  personv: Person;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -41,5 +42,10 @@ export class PersonDetailsComponent implements OnInit {
     <body onload="window.print(); ">${printContents}</body>
       </html>`);
     popupWin.document.close();
+  }
+  funcc() {
+    this.personservice.findbyvaccin(this.id).subscribe((data) => {
+      this.person = data;
+    });
   }
 }

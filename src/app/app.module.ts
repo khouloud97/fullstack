@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { NewsapiservicesService } from './services/newsapiservices.service';
 import { VaccinListComponent } from './vaccin-list/vaccin-list.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { CreateVaccinComponent } from './create-vaccin/create-vaccin.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     PersonDetailsComponent,
     HomeComponent,
     VaccinListComponent,
+    CreateVaccinComponent,
   ],
   imports: [
     BrowserModule,
