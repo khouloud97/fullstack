@@ -5,6 +5,7 @@ import { CreateVaccinComponent } from './create-vaccin/create-vaccin.component';
 import { HomeComponent } from './home/home.component';
 import { PersonDetailsComponent } from './person-details/person-details.component';
 import { PersonListComponent } from './person-list/person-list.component';
+import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 import { UpdatePersonComponent } from './update-person/update-person.component';
 import { VaccinListComponent } from './vaccin-list/vaccin-list.component';
 
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'create-vaccins',
     component: CreateVaccinComponent,
+  },
+  {
+    path: 'splash-screen',
+    component: SplashScreenComponent,
   },
 
   {

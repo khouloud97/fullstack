@@ -27,9 +27,7 @@ export class PersonService {
   deletePerson(id: number): Observable<Object> {
     return this.httpClient.delete(`${this.baseURL}/${id}`);
   }
-  getpersonbyVaccin(id: number): Observable<Object> {
-    return this.httpClient.delete(`${this.baseURL}/${id}`);
-  }
+ 
   findbyvaccin(id: number): Observable<Person> {
     return this.httpClient.get<Person>(`${this.baseURL}/${id}`);
   }

@@ -14,6 +14,7 @@ import { NewsapiservicesService } from './services/newsapiservices.service';
 import { VaccinListComponent } from './vaccin-list/vaccin-list.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { CreateVaccinComponent } from './create-vaccin/create-vaccin.component';
+import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CreateVaccinComponent } from './create-vaccin/create-vaccin.component';
     HomeComponent,
     VaccinListComponent,
     CreateVaccinComponent,
+    SplashScreenComponent,
   ],
   imports: [
     BrowserModule,

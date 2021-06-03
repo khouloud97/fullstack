@@ -13,7 +13,11 @@
         placeholder=""
         required
         name="firstname"
+        #firstname="ngModel"
       />
+      <span style="color: red" *ngIf="!firstname.valid && firstname.touched">
+        firstname
+      </span>
     </div>
 
     <div class="form-group">
@@ -26,7 +30,11 @@
         class="form-control"
         placeholder=""
         required
+        #lastname="ngModel"
       />
+      <span style="color: red" *ngIf="!lastname.valid && lastname.touched">
+        lastname
+      </span>
     </div>
 
     <div class="form-group">
@@ -39,7 +47,11 @@
         class="form-control"
         placeholder=""
         required
+        #email="ngModel"
       />
+      <span style="color: red" *ngIf="!email.valid && email.touched">
+        lastname
+      </span>
     </div>
 
     <div class="form-group">
@@ -52,11 +64,15 @@
         class="form-control"
         placeholder=""
         required
+        #url="ngModel"
       />
+      <span style="color: red" *ngIf="!url.valid && url.touched">
+        lastname
+      </span>
     </div>
     <div class="form-group">
       <label> Vaccin type</label>
-      <input
+      <select
         id=""
         name="cp_fk"
         [(ngModel)]="person.cp_fk"
@@ -64,9 +80,16 @@
         class="form-control"
         placeholder=""
         required
-      />
+      >
+        <option value="">--Please choose an option--</option>
+        <option value="1">Pfizer</option>
+        <option value="2">SINOVAC</option>
+        <option value="3">AstraZeneca</option>
+      </select>
     </div>
 
-    <button class="btn btn-success" type="submit">Submit</button>
+    <button [disabled]="!f.valid" class="btn btn-success" type="submit">
+      Submit
+    </button>
   </form>
 </body>

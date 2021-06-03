@@ -8,11 +8,12 @@
 }
 .ok {
   text-align: center;
-  background-color: rgba(238, 184, 197, 0.733);
+  background-color: rgb(252, 252, 252);
 }
 .ok > h3 {
   text-align: center;
 }
 .ok > img {
   text-align: center;
+  top: auto;
 }
