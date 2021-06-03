@@ -15,6 +15,8 @@ import { VaccinListComponent } from './vaccin-list/vaccin-list.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { CreateVaccinComponent } from './create-vaccin/create-vaccin.component';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
+import { SinovacComponent } from './sinovac/sinovac.component';
+import { AstraZenecaComponent } from './astra-zeneca/astra-zeneca.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { SplashScreenComponent } from './splash-screen/splash-screen.component';
     VaccinListComponent,
     CreateVaccinComponent,
     SplashScreenComponent,
+    SinovacComponent,
+    AstraZenecaComponent,
   ],
   imports: [
     BrowserModule,

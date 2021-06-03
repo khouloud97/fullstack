@@ -1,19 +1,50 @@
-<nav class="navbar navbar-expand-sm bg-danger navbar-dark">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">
+    <img
+      src="https://image.freepik.com/vecteurs-libre/world-fight-corona-virus-icon-illustration-personnage-dessin-anime-mascotte-corona-concept-icone-mondiale-isole_138676-1006.jpg"
+      alt="logo"
+      style="width: 50px"
+    />
+  </a>
+  <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
       <a routerLink="/home" class="nav-link"> Home</a>
     </li>
-    <li class="nav-item">
-      <a routerLink="/persons" class="nav-link"> vaccinated person </a>
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a
+        routerLink="/persons"
+        class="nav-link"
+        id="navbardrop"
+        data-toggle="dropdown"
+      >
+        vaccinated person
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" routerLink="/splash-screen">
+          Person with PFIZer</a
+        >
+        <a class="dropdown-item" routerLink="/sinovac">Person with Sionvac</a>
+        <a class="dropdown-item" routerLink="/astra-zeneca"
+          >Person with AstraZeneca</a
+        >
+      </div>
     </li>
+    <li class="nav-item"></li>
     <li class="nav-item">
       <a routerLink="/create-persons" class="nav-link"> ADD Person </a>
     </li>
     <li class="nav-item">
       <a routerLink="/create-vaccins" class="nav-link"> ADD New Vaccin </a>
     </li>
+    <li class="nav-item">
+      <a routerLink="/vaccins" class="nav-link">Vaccin List </a>
+    </li>
   </ul>
 </nav>
+<br />
 
 <div class="container">
   <router-outlet></router-outlet>

@@ -8,6 +8,9 @@ import { Person } from './person';
 })
 export class PersonService {
   private baseURL = 'http://localhost:8080/api/v1/persons';
+  private URLVaccin = 'http://localhost:8080/api/v1/persons/cp_fk=1';
+  private URLsinovac = 'http://localhost:8080/api/v1/persons/cp_fk=2';
+  private URLast = 'http://localhost:8080/api/v1/persons/cp_fk=3';
 
   constructor(private httpClient: HttpClient) {}
 
@@ -27,8 +30,26 @@ export class PersonService {
   deletePerson(id: number): Observable<Object> {
     return this.httpClient.delete(`${this.baseURL}/${id}`);
   }
- 
+
   findbyvaccin(id: number): Observable<Person> {
-    return this.httpClient.get<Person>(`${this.baseURL}/${id}`);
+    return this.httpClient.get<Person>(`${this.URLVaccin}/${id}`);
+  }
+
+  getpersonparvaccin(): Observable<Person[]> {
+    return this.httpClient.get<Person[]>(`${this.URLVaccin}`);
+  }
+  findbyvaccin1(id: number): Observable<Person> {
+    return this.httpClient.get<Person>(`${this.URLsinovac}/${id}`);
+  }
+
+  getpersonparvaccin1(): Observable<Person[]> {
+    return this.httpClient.get<Person[]>(`${this.URLsinovac}`);
+  }
+  findbyvaccin3(id: number): Observable<Person> {
+    return this.httpClient.get<Person>(`${this.URLast}/${id}`);
+  }
+
+  getpersonparvaccin3(): Observable<Person[]> {
+    return this.httpClient.get<Person[]>(`${this.URLast}`);
   }
 }

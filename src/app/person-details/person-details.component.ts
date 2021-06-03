@@ -43,9 +43,4 @@ export class PersonDetailsComponent implements OnInit {
       </html>`);
     popupWin.document.close();
   }
-  funcc() {
-    this.personservice.findbyvaccin(this.id).subscribe((data) => {
-      this.person = data;
-    });
-  }
 }

@@ -1,13 +1,7 @@
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
 }
-#splash {
-  animation: 9ms;
+.splash {
+  animation: mymove 500s infinite;
   margin: auto;
   position: absolute;
   top: 0;

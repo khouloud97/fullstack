@@ -1,6 +1,6 @@
 .box {
   padding: 10px 10px;
-  background-color: rgba(238, 184, 197, 0.733);
+  background-color: rgb(211, 227, 248);
 }
 
 .box h5 {
@@ -8,7 +8,7 @@
 }
 .ok {
   text-align: center;
-  background-color: rgb(252, 252, 252);
+  background-color: rgb(211, 227, 248);
 }
 .ok > h3 {
   text-align: center;
